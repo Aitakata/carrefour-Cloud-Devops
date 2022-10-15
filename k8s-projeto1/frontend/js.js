@@ -5,7 +5,14 @@ $("#button-blue").on("click", function() {
     var txt_comentario = $("#comment").val();
 
     $.ajax({
-        url: "",
+        /*  o endereço ip da url foi copiado da resolução do instrutor. Se eu tivesse o ambiente para 
+            implementar o laboratório, nesse ponto deveria fazer um
+               
+               > kubectl get service
+               
+            e pegar o External-IP do serviço php para atribuir a url
+        */
+        url: "https://34.95.199.246",
         
         type: "post",
         data: {nome: txt_nome, comentario: txt_comentario, email: txt_email},
